@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+SCRIPTPATH="$(
+	cd "$(dirname "$0")" || exit
+	pwd -P
+)"
+
+leftwm-command "UnloadTheme"
+
+pkill dunst
+pkill polybar
+pkill compton
+pkill picom
+pkill polybar
