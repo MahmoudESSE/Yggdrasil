@@ -21,6 +21,6 @@ Based on the ascent theme from leftwm-theme customized to run my own config.
 
 ## Installing
 
-1. `git clone https://gitlab.com/MahmoudESSE/Ascent.git`
+1. `git clone https://github.com/MahmoudESSE/Ascent.git`
 2. `ln -s $PWD/ascent $HOME/.config/leftwm/themes/current`
 3. Reload LeftWM
