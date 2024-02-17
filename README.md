@@ -7,7 +7,9 @@ Based on the ascent theme from leftwm-theme customized to run my own config.
 
 ## Screenshots
 
-![Terminal, wallpaper](https://i.imgur.com/9rY58GT.png)
+![Polybar, wallpaper](./screenshots/desktop.png)
+
+![Terminal, wallpaper](./screenshots/terminal.png)
 
 ## Dependencies
 
