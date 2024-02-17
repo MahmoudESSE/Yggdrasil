@@ -7,8 +7,9 @@ SCRIPTPATH="$(
 
 leftwm-command "UnloadTheme"
 
-pkill dunst
-pkill polybar
-pkill compton
-pkill picom
-pkill polybar
+# Kill Processes
+pkill dunst &
+pkill polybar &
+pkill compton &
+pkill picom &
+pkill polybar &
