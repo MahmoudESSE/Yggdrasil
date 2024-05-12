@@ -5,11 +5,13 @@ SCRIPTPATH="$(
 	pwd -P
 )"
 
-leftwm-command "UnloadTheme"
+export SCRIPTPATH
+
+leftwm command "UnloadTheme"
 
 # Kill Processes
-pkill dunst &
-pkill polybar &
-pkill compton &
-pkill picom &
-pkill polybar &
+pkill dunst
+pkill polybar
+pkill compton
+pkill picom
+pkill polybar

@@ -61,7 +61,7 @@ if [ -x "$(command -v rofi)" ]; then
 
 fi
 
-#boot compton or picom if it exists
+#boot picom if it exists
 if [ -x "$(command -v picom)" ]; then
 	PICOMDIR=$HOME/.config/picom
 
@@ -69,6 +69,7 @@ if [ -x "$(command -v picom)" ]; then
 		mkdir -p "$PICOMDIR"
 	fi
 
+	# preserve the old rofi config if there is one
 	if [ -f "$PICOMDIR/picom.config" ]; then
 		mv "$PICOMDIR/picom.conf" "$PICOMDIR/picom.conf.old"
 	fi
@@ -84,7 +85,7 @@ if [ -x "$(command -v feh)" ]; then
 fi
 
 #set the theme.toml config
-leftwm-command "LoadTheme $SCRIPTPATH/theme.ron"
+leftwm command "LoadTheme $SCRIPTPATH/theme.ron"
 # keep legacy them config if anyone needs it
 # leftwm-command "LoadTheme $SCRIPTPATH/theme.toml"
 
@@ -93,7 +94,7 @@ if [ -x "$(command -v polybar)" ]; then
 	pkill polybar
 	monitors="$(polybar -m | sed s/:.*// | tac)"
 	while read -r display; do
-		MONITOR=$display polybar -c "$SCRIPTPATH/polybar.config" mainbar &>/dev/null &
+		MONITOR=$display polybar -c "$SCRIPTPATH/polybar.config" "mainbar" &>/dev/null &
 	done <<<"$monitors"
 	exit 0
 fi
