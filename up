@@ -55,6 +55,13 @@ if [ -x "$(command -v rofi)" ]; then
 		mv "$ROFIDIR/config.rasi" "$ROFIDIR/config.rasi.old"
 	fi
 
+	cat <<EOL >"$ROFIDIR/config.rasi"
+	configuration {
+  modes: [ combi ];
+  combi-modes: [ window, drun, run ];
+}
+EOL
+
 	echo "@import \"nord\"" >"$ROFIDIR/config.rasi"
 
 	echo "@theme \"nord\"" >>"$ROFIDIR/config.rasi"

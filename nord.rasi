@@ -44,7 +44,7 @@ window {
     location:   center;
     width:      480px;
     y-offset:   -160px;
-    border:     1px;
+    border:     6px;
 }
 
 inputbar {
@@ -71,6 +71,7 @@ listview {
 element {
     padding:    8px;
     spacing:    8px;
+    children:   [element-icon, element-text];
 }
 
 element normal urgent {
@@ -86,7 +87,7 @@ element selected {
 }
 
 element selected normal {
-    background-color:   @accent-color;
+    background-color:   @nord14;
 }
 
 element selected urgent {
@@ -94,7 +95,7 @@ element selected urgent {
 }
 
 element selected active {
-    background-color:   @nord8;
+    background-color:   @nord10;
 }
 
 element-icon {
